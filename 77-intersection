@@ -1,5 +1,6 @@
 public Set<Integer> setIntersection(Set<Integer> set1, Set<Integer> set2) {
     //code here
-    Boolean result = set1.retainAll(set2);
-    return set1;
+    Set set3=set1.clone();
+    Boolean result = set3.retainAll(set2);
+    return set3;
 }
