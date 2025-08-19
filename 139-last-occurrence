@@ -1,0 +1,11 @@
+public static Integer findLast(List<Integer> nums, Integer target) {
+   // code here
+   List<Integer> reverseList = new List<Integer>();
+   if(nums.contains(target)){
+   for(Integer i=nums.size()-1;i>=0;i--){
+   if(nums[i]==target)
+        return i;
+      }
+   }
+   return -1;
+}
