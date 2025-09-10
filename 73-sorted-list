@@ -21,7 +21,7 @@ public boolean isSorted(List<Integer> numbers) {
                     order=1;
                 if(numbers.get(i)>numbers.get(i+1))//desc
                     order=0;
-                    else{
+                    else{//incase of same numbers again break out of this loop and check in next iteration
                     order=-1;
                     break;
                     }
