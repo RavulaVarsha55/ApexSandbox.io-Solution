@@ -13,4 +13,6 @@ public String aOrAn(String word) {
 
     }
 }
+            return word;
+
 }
