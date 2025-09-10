@@ -3,25 +3,28 @@ public boolean isSorted(List<Integer> numbers) {
     if(numbers.size()<3)
     return true;
     else{
-        Integer order=-1;
+        Integer order=-1;//No order
         if(numbers.get(0)<numbers.get(1)){
-            order=1;
+            order=1;//desc
         }
         if(numbers.get(0)>numbers.get(1)){
-            order=0;
+            order=0;//asc
         }  
-      
         //desc
         for(Integer i=1;i<numbers.size()-1;i++){
-            if(order==1 && numbers.get(i)>numbers.get(i+1))
+            if(order==1 && numbers.get(i)>numbers.get(i+1))//if desc and not following condition
                 return false;
-            if(order==0 && numbers.get(i)<numbers.get(i+1))
+            if(order==0 && numbers.get(i)<numbers.get(i+1))//if asc not following condition
             return false;
-            if(order==-1){
-                if(numbers.get(i)<numbers.get(i+1))
+            if(order==-1){//still no order 
+                if(numbers.get(i)<numbers.get(i+1))//desc
                     order=1;
-                else 
+                if(numbers.get(i)>numbers.get(i+1))//desc
                     order=0;
+                    else{
+                    order=-1;
+                    break;
+                    }
         }
         }
         return true;
