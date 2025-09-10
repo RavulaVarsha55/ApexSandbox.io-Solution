@@ -7,12 +7,8 @@ public String aOrAn(String word) {
             return 'an '+word;
 
     }
-    else{
-        //word='a '+word;
-            return 'a '+word;
-
-    }
+    
 }
-            return word;
+            return 'a '+word;
 
 }
