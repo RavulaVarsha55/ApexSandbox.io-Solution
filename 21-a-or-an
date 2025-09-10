@@ -2,13 +2,9 @@ public String aOrAn(String word) {
     //code here
     list <String> vowelList= new list <String>{'a','e','i','o','u'};
     for(String si:vowelList){
-    if(word.startsWith(si)){
-        //word='an '+word;
+    if(word.startsWith(si))
             return 'an '+word;
-
     }
-    
-}
             return 'a '+word;
 
 }
