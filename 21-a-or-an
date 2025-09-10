@@ -3,13 +3,13 @@ public String aOrAn(String word) {
     list <String> vowelList= new list <String>{'a','e','i','o','u'};
     for(String si:vowelList){
     if(word.startsWith(si)){
-        word='an '+word;
-            return word;
+        //word='an '+word;
+            return 'an '+word;
 
     }
     else{
-        word='a '+word;
-            return word;
+        //word='a '+word;
+            return 'a '+word;
 
     }
 }
