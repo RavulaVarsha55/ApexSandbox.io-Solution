@@ -10,7 +10,7 @@ public boolean isSorted(List<Integer> numbers) {
         for(Integer i=1;i<numbers.size()-1;i++){
             if(order==1 && numbers.get(i)>numbers.get(i+1))
                 return false;
-            if(order==0 && numbers.get(i)<numbers.get(i+1)))
+            if(order==0 && numbers.get(i)<numbers.get(i+1))
             return false;
         }
         return true;
