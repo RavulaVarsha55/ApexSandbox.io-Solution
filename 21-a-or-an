@@ -2,9 +2,11 @@ public String aOrAn(String word) {
     //code here
     list <String> vowelList= new <String>({'a','e','i','o','u'});
     
-    if(word.charAt(0).contains(vowelList))
+    if(word.charAt(0).contains(vowelList)){
         word.join('an',' ');
-    else
+    }
+    else{
         word.join('a',' ');
+    }
     return word;
 }
