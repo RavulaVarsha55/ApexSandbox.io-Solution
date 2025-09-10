@@ -1,9 +1,24 @@
 public boolean isSorted(List<Integer> numbers) {
     //code here
-    Integer l =0, r = numbers.size()-1;
-    Integer n = numbers.size()-1;
-    while(l+1 < n && r > 0 )
-    {
-        if(numbers.get(l) )
+    if(numbers.size()<3)
+    return true;
+    else{
+        Integer order=0;
+        if(numbers.get(0)<numbers.get(1)){
+            order=1;
+        }
+        if(numbers.get(0)==numbers.get(1)){
+                   if(numbers.get(1)<numbers.get(2)){
+ order=1;
+        }
+        }
+        //desc
+        for(Integer i=1;i<numbers.size()-1;i++){
+            if(order==1 && numbers.get(i)>numbers.get(i+1))
+                return false;
+            if(order==0 && numbers.get(i)<numbers.get(i+1))
+            return false;
+        }
+        return true;
     }
 }
