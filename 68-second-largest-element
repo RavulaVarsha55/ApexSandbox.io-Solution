@@ -5,7 +5,7 @@ public Integer secondLargest(List<Integer> numbers) {
     Integer maxSecond=numbers[numbers.size()-2];
 
     for(Integer i=numbers.size()-2;i>=0;i--){
-        if(maxSecond<numbers[i]){
+        if(maxSecond>numbers[i]){
             maxSecond=numbers[i];
             return maxSecond;
         }
