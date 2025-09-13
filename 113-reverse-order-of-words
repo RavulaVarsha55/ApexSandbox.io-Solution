@@ -1,4 +1,10 @@
 public String reverseWordsInASentence(String sentence){
     //your flawless code here
-    List<String> reversed=sentence.split( );
+  List<String> reversed=sentence.split(' '); 
+    String revsentence='';
+    for(Integer i=reversed.size()-1;i>=0;i--){
+        revsentence=revsentence+' '+reversed.get(i);
+    }
+    return revsentence.normalizeSpace();
+
 }
