@@ -1,0 +1,31 @@
+public List<Account> checkAccounts(List<Account> accounts)
+{
+    // code here 
+    try{
+        if(accounts==null){
+            throw new IllegalArgumentException('accounts should not be null');
+        }
+        else{
+            for (Account a:accounts){
+                if(a.BillingCity==null){
+                    throw new AccountException('Invalid BillingCity');
+                }else{
+                    return accounts;
+                }
+            }
+        }
+    }
+    catch(IllegalArgumentException e){
+        return e.getMessage();
+
+    }
+    catch(AccountException e){
+        return e.getMessage();
+    }
+    catch(Exception e){
+        return e.getMessage();
+    }
+}
+
+//do not remove the following custom-defined exception
+public class AccountException extends Exception {}
