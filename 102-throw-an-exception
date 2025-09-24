@@ -20,10 +20,10 @@ public List<Account> checkAccounts(List<Account> accounts)
 
     }
     catch(AccountException e){
-        return e.getMessage();
+        System.debug(e.getMessage());
     }
     catch(Exception e){
-        return e.getMessage();
+        System.debug(e.getMessage());
     }
 }
 
