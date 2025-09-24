@@ -1,0 +1,5 @@
+public String getAccountBillingCityWithSafeNavigation(List<Account> accounts){
+   // Code here
+   String billingCity=accounts.get(0)?accounts.get(0).BillingCity?accounts.get(0).BillingCity:null;
+   return billingCity;
+}
