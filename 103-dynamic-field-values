@@ -1,0 +1,14 @@
+public List<String> getFieldsValue(Account acc, List<String> fields)
+{
+    // code here
+    List<String> res= new List<String>();
+    for(String s:fields){
+        
+        if (acc.get(s)==null){
+            res.add('null');
+        }else{
+            res.add(acc.get(s));
+        }
+    }
+    return res;
+}
