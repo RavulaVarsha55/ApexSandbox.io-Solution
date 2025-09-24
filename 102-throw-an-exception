@@ -2,17 +2,14 @@ public List<Account> checkAccounts(List<Account> accounts)
 {
     // code here 
     
-        if(accounts==null){
-            return null;  
-                }
-        else{
-            for (Account a:accounts){
-                if(a.BillingCity==null){
-                    throw new AccountException('Invalid BillingCity');
-                }
-            }
-        }
-        return accounts;
+       if(accounts == null)
+        return null;    
+    for(Account acc: accounts)
+    {
+        if(acc.BillingCity == null)
+            throw new AccountException('Invalid BillingCity');
+    }
+    return accounts;
     
     
    
