@@ -9,16 +9,13 @@ public List<Account> checkAccounts(List<Account> accounts)
             for (Account a:accounts){
                 if(a.BillingCity==null){
                     throw new AccountException('Invalid BillingCity');
-                }else{
-                    return accounts;
                 }
             }
         }
+        return accounts;
     }
     
-    catch(Exception e){
-        System.debug(e.getMessage());
-    }
+    
 }
 
 //do not remove the following custom-defined exception
