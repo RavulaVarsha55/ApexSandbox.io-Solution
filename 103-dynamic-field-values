@@ -7,7 +7,7 @@ public List<String> getFieldsValue(Account acc, List<String> fields)
         if (acc.get(s)==null){
             res.add('null');
         }else{
-            res.add(acc.get(s));
+            res.add(String.ValueOf(acc.get(s)));
         }
     }
     return res;
