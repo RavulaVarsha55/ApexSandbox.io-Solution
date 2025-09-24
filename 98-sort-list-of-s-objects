@@ -2,14 +2,14 @@ public List<Account> getAccounts(List<Account> accounts) {
     if(accounts==null){
         return null;
     }
-     accounts.sort();
+     accounts.sort(new AccountComparator());
      return accounts;
     // code here
     
 }
 
 // write extra class here 
-public class AccountComparator implements Comparator<Account> {
+global class AccountComparator implements Comparator<Account> {
     public Integer compare(Account o1, Account o2) {
         // The return value of 0 indicates that both elements are equal.
         Integer returnValue = 0;
