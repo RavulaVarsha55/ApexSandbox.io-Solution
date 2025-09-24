@@ -3,8 +3,8 @@ public List<Account> checkAccounts(List<Account> accounts)
     // code here 
     try{
         if(accounts==null){
-            throw new IllegalArgumentException('accounts should not be null');
-        }
+            return null;  
+                }
         else{
             for (Account a:accounts){
                 if(a.BillingCity==null){
@@ -15,14 +15,7 @@ public List<Account> checkAccounts(List<Account> accounts)
             }
         }
     }
-    catch(IllegalArgumentException e){
-         System.debug(e.getMessage());
-         return null;
-
-    }
-    catch(AccountException e){
-        System.debug(e.getMessage());
-    }
+    
     catch(Exception e){
         System.debug(e.getMessage());
     }
