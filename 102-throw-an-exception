@@ -1,7 +1,7 @@
 public List<Account> checkAccounts(List<Account> accounts)
 {
     // code here 
-    try{
+    
         if(accounts==null){
             return null;  
                 }
@@ -13,9 +13,9 @@ public List<Account> checkAccounts(List<Account> accounts)
             }
         }
         return accounts;
-    }
     
     
+   
 }
 
 //do not remove the following custom-defined exception
