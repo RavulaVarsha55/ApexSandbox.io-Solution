@@ -2,13 +2,10 @@ public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> cont
 {
     // code here
     List<sObject> sObjectlist = new List<sObject>();
-    if((accounts==null || accounts.isEmpty()) && contacts!=null){
+    if((accounts==null || accounts.isEmpty() || (contacts==null || contacts.isEmpty()){
         return sObjectlist;
     }
      
-    if(contacts==null || contacts.isEmpty()){
-        return sObjectlist;
-    }
     sObjectlist.addAll(accounts);
     sObjectlist.addAll(contacts);
 return sObjectlist;
