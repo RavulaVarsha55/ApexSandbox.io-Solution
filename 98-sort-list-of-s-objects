@@ -9,8 +9,8 @@ public List<Account> getAccounts(List<Account> accounts) {
 }
 
 // write extra class here 
-global class AccountComparator implements Comparator<Account> {
-    global Integer compare(Account o1, Account o2) {
+public class AccountComparator implements Comparator<Account> {
+    public Integer compare(Account o1, Account o2) {
         // The return value of 0 indicates that both elements are equal.
         Integer returnValue = 0;
         
