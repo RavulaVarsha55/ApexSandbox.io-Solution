@@ -7,7 +7,7 @@ public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> cont
                 sObjectlist.addAll(accounts);
 
     }
-    else if(contacts!=null)){
+    else if(contacts!=null){
         sObjectlist.addAll(contacts);
     }
         return sObjectlist;
