@@ -1,0 +1,11 @@
+public List<String> commonChars(List<String> strs){
+    //solution here 
+    for (Integer i = 0; i < strs.length(); i++) {
+     Integer code = (Integer)s.charAt(i);
+     Integer idx = code - (Integer)'a';
+     if (idx >= 0 && idx < 26) {
+         freq[idx] = freq[idx] + 1;
+     }
+ }
+ return freq;
+}
