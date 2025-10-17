@@ -8,6 +8,8 @@ public class Stack {
     
     public Object pop() {
         //implement pop
+         if(stack.isEmpty())
+            return null;
         return stack.remove(stack.size()-1);
     }
     
