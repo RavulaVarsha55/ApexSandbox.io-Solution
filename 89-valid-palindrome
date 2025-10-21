@@ -1,13 +1,18 @@
 public Boolean isPalindrome(String str){
 //code here
+//compile alphabets  and numbers only
 Pattern nonAlphanumeric = Pattern.compile('[^a-zA-Z0-9]');
 String stringAlpha = nonAlphanumeric.matcher(str.toLowerCase()).replaceAll('');
+//after removing all extra elements if string is empty , its a palindrome so return true
 if(stringAlpha.length()==0){
     return true;
 }
+//two pointers
 Integer l=0;
 Integer r=stringAlpha.length()-1;
+//stopping condition outside loop-> until l is half of string(can take r also)
     while(l!=stringAlpha.length()/2){
+        //keep checking if form both side char is same otherwise return false
         if(stringAlpha.charAt(l)==stringAlpha.charAt(r)){
             l+=1;
             r-=1;
@@ -15,6 +20,7 @@ Integer r=stringAlpha.length()-1;
             return false;
         }
     }
+    //at end u ll have checked all chars if len is even , if len is odd u ll leave one in middle no need to check
     return true;
  // return strin.length()==0?true:strin==strin.reverse()?true:false;  
 }
