@@ -1,16 +1,14 @@
 public Boolean isPalindrome(String str){
 //code here
-String stri=str.toLowerCase();
 Pattern nonAlphanumeric = Pattern.compile('[^a-zA-Z0-9]');
-Matcher matcher = nonAlphanumeric.matcher(stri);
-String strin= matcher.replaceAll('');
-if(strin.length()==0){
+String string = nonAlphanumeric.matcher(str.toLowerCase()).replaceAll('');
+if(string.length()==0){
     return true;
 }
 Integer l=0;
-Integer r=strin.length()-1;
-    while(l!=strin.length()/2){
-        if(strin.charAt(l)==strin.charAt(r)){
+Integer r=string.length()-1;
+    while(l!=string.length()/2){
+        if(string.charAt(l)==string.charAt(r)){
             l+=1;
             r-=1;
         }else{
