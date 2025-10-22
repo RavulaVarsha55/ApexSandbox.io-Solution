@@ -1,7 +1,25 @@
 public boolean isAnagram(String s1, String s2) {
     //Code here
-    if(s1.sort()==s2.sort()){
-        return true;
+    if(s1.length()!==s2.length()){
+        return false;
     }
-    return false;
+    Map<String,Integer> charCounterS1= new Map<String,Integer>();
+        Map<String,Integer> charCounterS2= new Map<String,Integer>();
+
+    for (Integer i=0;i<s1.length();i++){
+        //s1
+        if(charCounterS1.containsKey(s1.charAt(i))){
+            charCounterS1.put(s1.charAt(i),charCounterS1.get(s1.charAt(i))+1);
+        }else{
+        charCounterS1.put(s1.charAt(i),1);
+        }
+        if(charCounterS2.containsKey(s2.charAt(i))){
+            charCounterS2.put(s2.charAt(i),charCounterS2.get(s2.charAt(i))+1);
+        }else{
+        charCounterS2.put(s2.charAt(i),1);
+        }
+if(charCounterS1==charCounterS2){
+    return true;
 }
+return false;
+    }
