@@ -5,6 +5,7 @@ public boolean isAnagram(String s1, String s2) {
     }
     Map<String,Integer> charCounterS1= new Map<String,Integer>();
         Map<String,Integer> charCounterS2= new Map<String,Integer>();
+Integer[] chars = str.getChars();
 
     for (Integer i=0;i<s1.length();i++){
         //s1
