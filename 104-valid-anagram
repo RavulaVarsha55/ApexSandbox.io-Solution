@@ -1,6 +1,6 @@
 public boolean isAnagram(String s1, String s2) {
     //Code here
-    if(s1.length()!==s2.length()){
+    if(s1.length()!=s2.length()){
         return false;
     }
     Map<String,Integer> charCounterS1= new Map<String,Integer>();
