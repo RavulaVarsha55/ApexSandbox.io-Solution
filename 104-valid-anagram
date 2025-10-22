@@ -18,6 +18,7 @@ public boolean isAnagram(String s1, String s2) {
         }else{
         charCounterS2.put(s2.charAt(i),1);
         }
+    }
 if(charCounterS1==charCounterS2){
     return true;
 }
