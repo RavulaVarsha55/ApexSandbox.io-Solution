@@ -22,5 +22,6 @@ Integer r=stringAlpha.length()-1;
     }
     //at end u ll have checked all chars if len is even , if len is odd u ll leave one in middle no need to check
     return true;
- // return strin.length()==0?true:strin==strin.reverse()?true:false;  
+    //Another solution in one liner
+ // return stringAlpha.length()==0?true:stringAlpha==stringAlpha.reverse()?true:false;  
 }
