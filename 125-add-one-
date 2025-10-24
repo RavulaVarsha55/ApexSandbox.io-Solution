@@ -1,0 +1,6 @@
+public void plusOne(List<Integer> numbers) {
+    // code here
+ String s=String.join(numbers,'');
+String ss=String.valueOf(Integer.valueOf(s)+1);
+List<string> sf=ss.split('');
+}
