@@ -1,0 +1,26 @@
+public static Boolean sameString(String str1, String str2){
+    // solution
+    str1=transform(str1);
+    str2=transform(str2);
+    return str1==str2;
+}
+public static String transform(String s){
+    List<String> str= s.split('');
+    Integer i=str.size()-1;
+    Integer hashFlag=0;
+    String tString='';
+    while(i>=0){
+        if(str.get(i)=='#'){
+            hashFlag+=1;
+        }
+        else if(hashFlag>0){
+            hashFlag-=1;
+        }
+        else{
+            tString=tString+str.get(i);
+        }
+        i--;
+    }
+    return tString;
+
+}
