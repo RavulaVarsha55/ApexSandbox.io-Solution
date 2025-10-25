@@ -1,7 +1,35 @@
 public void plusOne(List<Integer> numbers) {
     // code here
- String s=String.join(numbers,'');
-String ss=String.valueOf(Integer.valueOf(s)+1);
-List<string> sf=ss.split('');
-return sf;
+ Boolean flag=false;
+for(Integer i=numbers.size()-1;i>=0;i--){
+    
+    if(numbers[i]+1<9 && flag==false){
+            //flag=true;
+            //Integer s=numbers.remove(i);
+         	numbers.set(i,numbers[i]+1);
+        break;
+        }else if(numbers[i]+1>9 && flag==false){
+          //Integer s=numbers.remove(i);
+            if(numbers.size()==1){
+                 numbers.clear();
+                numbers.add(1);
+                numbers.add(0);
+                break;
+            }else{
+                numbers.set(i,0);
+            flag=true;
+
+            }
+        }
+    else if(numbers[i]+1>9 && flag==true){
+        flag=true;
+                 numbers.set(i,0);
+
+    }
+    else{
+        flag=false;
+        numbers.set(i,numbers[i]+1);
+        break;
+ 
+    }
 }
