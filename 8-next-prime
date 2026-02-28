@@ -2,8 +2,9 @@ public Integer nextPrime(Integer num) {
     //code here
     Integer count=0;
     Boolean isPrime=false;
+
     while(!isPrime){
-        thisnum=num+1;
+        Integer thisnum=num+1;
     for(Integer i=2;i<=thisnum-1;i++){
         if (Math.mod(thisnum,i)==0){
             isPrime=true;
