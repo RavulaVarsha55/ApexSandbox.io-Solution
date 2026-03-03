@@ -13,7 +13,7 @@ public static List<Contact> ContactDeduplicator(List<Contact> contacts) {
     return conList;
     }
     else{
-        return conList;
+        return contacts;
     
     }
 }
