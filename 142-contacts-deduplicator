@@ -2,7 +2,11 @@ public static List<Contact> ContactDeduplicator(List<Contact> contacts) {
     //code here
     Set<String> emailList= new Set<String>();
     List<Contact> conList= new List<Contact>();
+    if(contacts==null){
+        return 0;
+    }
     for(Contact c:contacts){
+        
         if(!emailList.contains(c.Email)){
             conList.add(c);
         }
