@@ -1,0 +1,21 @@
+public Boolean isKeyAccount(Account a) {
+    //code here
+    Map<String,Integer> metrics = new Map<String,Integer>(
+        {
+             Banking=> 600000,
+     Technology=>800000,
+     Retail=>2000000,
+     All => 500000
+        }
+
+    )
+    /*
+    Integer Banking= 600000;
+    Integer Technology=800000;
+    Integer Retail=2000000;
+    Integer All = 500000;*/
+    if( a.AnnualRevenue<=metrics.get(a.Industry)){
+        return true;
+    }
+
+}
