@@ -1,9 +1,4 @@
 public Integer secondLargest(List<Integer> numbers) {
     //code here
-    Set<Integer> mySet = new Set<Integer>();
-    mySet.addAll(numbers);
-    List<Integer> numbersList= new List<Integer>(mySet);
-    numbersList.sort();
-    return numbersList[numbersList.size()-2];
-
+    return numbers.sort()[numbers.size()-2];
 }
