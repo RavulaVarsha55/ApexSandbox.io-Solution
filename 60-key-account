@@ -12,7 +12,7 @@ public Boolean isKeyAccount(Account a) {
     Integer Technology=800000;
     Integer Retail=2000000;
     Integer All = 500000;*/
-    if(a.Industry !=metrics.get(a.Industry) && metrics.get('All')<a.AnnualRevenue )|| (a.AnnualRevenue<metrics.get(a.Industry))){
+    if((a.Industry !=metrics.get(a.Industry) && metrics.get('All')<a.AnnualRevenue )|| (a.AnnualRevenue<metrics.get(a.Industry))){
         return false;
     }
     return true;
