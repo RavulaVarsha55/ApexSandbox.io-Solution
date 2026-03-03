@@ -15,5 +15,6 @@ public Boolean isKeyAccount(Account a) {
     if( a.AnnualRevenue<=metrics.get(a.Industry)){
         return true;
     }
+    return false;
 
 }
