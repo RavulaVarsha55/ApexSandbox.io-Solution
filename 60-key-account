@@ -8,7 +8,7 @@ public Boolean isKeyAccount(Account a) {
      All => 500000
         }
 
-    )
+    );
     /*
     Integer Banking= 600000;
     Integer Technology=800000;
