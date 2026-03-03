@@ -2,9 +2,8 @@ public static List<Contact> ContactDeduplicator(List<Contact> contacts) {
     //code here
     Set<String> emailList= new Set<String>();
     List<Contact> conList= new List<Contact>();
-    if(contacts.isEmpty()|| contacts==null){
-        return conList;
-    }
+    if(!contacts.isEmpty()|| contacts!=null){
+        
     for(Contact c:contacts){
         
         if(!emailList.contains(c.Email)){
@@ -12,4 +11,9 @@ public static List<Contact> ContactDeduplicator(List<Contact> contacts) {
         }
     }
     return conList;
+    }
+    else{
+        return conList;
+    
+    }
 }
