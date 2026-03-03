@@ -1,0 +1,8 @@
+public Boolean sameElements(List<Integer> nums1, List<Integer> nums2) {
+    //code here
+    Set<Integer> nums11= new Set<Integer>(nums1);
+    Set<Integer> nums22= new Set<Integer>(nums2);
+    return nums11==nums22;
+
+
+}
