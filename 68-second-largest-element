@@ -2,13 +2,26 @@ public Integer secondLargest(List<Integer> numbers) {
     //code here
     //numbers.sort(); 
     //return numbers[numbers.size()-2];
-    Integer secondMax=0;
+     Integer secondMax=0;
     Integer max=0;
-    for(Integer i : numbers){
-    if(i>max){
-        max=i;
+    if(numbers[0]>numbers[1]){
+        max=numbers[0];
+        secondMax=numbers[1];
+    }else{
+        max=numbers[1];
+        secondMax=numbers[0];
+    }
+    for(Integer i=2;i<numbers.size();i++){
+    if(numbers[i]>max){
         secondMax=max;
+        max=numbers[i];
     }
+        if(numbers[i]>secondMax && numbers[i]<max){
+            secondMax=numbers[i];
+        }
     }
+    system.debug('second'+secondMax);
+        system.debug('max'+max);
+
     return secondMax;
     }
