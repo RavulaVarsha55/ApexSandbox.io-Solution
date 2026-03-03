@@ -3,7 +3,7 @@ public static List<Contact> ContactDeduplicator(List<Contact> contacts) {
     Set<String> emailList= new Set<String>();
     List<Contact> conList= new List<Contact>();
     if(contacts.isEmpty()){
-        return 0;
+        return null;
     }
     for(Contact c:contacts){
         
