@@ -1,11 +1,24 @@
 public List<String> commonChars(List<String> strs){
     //solution here 
-    for (Integer i = 0; i < strs.length(); i++) {
-     Integer code = (Integer)s.charAt(i);
-     Integer idx = code - (Integer)'a';
-     if (idx >= 0 && idx < 26) {
-         freq[idx] = freq[idx] + 1;
-     }
- }
- return freq;
+    
+    Map<String,Integer> firstmap= new  Map<String,Integer>();
+    //build frequency maps for all
+      
+    String firstword=words[0];
+    for (Integer i=0;i<firstword.size();i++){
+        String c= firstword.substring(i,i+1);
+        firstmap.put(firstmap.containsKey(c)?firstmap.get(c)+1:1);
+    } 
+        Map<String,Integer> tempmap= new  Map<String,Integer>();
+
+    //build freq maps for rem
+for(Integer i=1;i<str.size();i++){
+    String currword=strs[i];
+for (Integer j=0;j<currword.size();j++){
+        String c= currword.substring(j,j+1);
+        tempmap.put(tempmap.containsKey(c)?tempmap.get(c)+1:1);
+    }
+}
+
+
 }
