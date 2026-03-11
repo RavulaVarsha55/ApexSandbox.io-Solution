@@ -1,0 +1,21 @@
+public static List<Integer> mergeLists(List<Integer> list1, List<Integer> list2){
+    // solution 
+    //Integer loopingnum=list1.size()>list2.size()>list1.size():list2.size();
+    List<Integer> mergeList= new List<Integer>();
+    Integer i=0;
+    Integer j=0;
+    while(i<list1.size()){
+    while(j<list2.size()){
+
+       if(list1[i]<list2[j]){
+        mergeList.add(list1[i]);
+        i++;
+        }
+        else{
+            mergeList.add(list2[j]);
+            j++;
+        }
+        }
+    }
+    return mergeList;
+}
